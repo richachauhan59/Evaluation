@@ -11,7 +11,7 @@ function UserDetails(props) {
             </div>
 
             <div>
-                <h2>{props.f_name + " " + props.l_name}</h2>
+                <h1>{props.f_name + " " + props.l_name}</h1>
                 <div >
                     {props.address}
                 </div>

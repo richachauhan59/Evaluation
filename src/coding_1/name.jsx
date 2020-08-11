@@ -3,22 +3,27 @@ import data from '../data.json'
 import UserDetails from './userDetails'
 
 export default class Name extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
 
- }
-    render(){
-        return(
+    }
+
+
+    render() {
+        return (
             <div  >
 
                 {
-                    data.map(item =>
+                    
+                    data.sort((a, b) => a.first_name.localeCompare(b.last_name))
+
+                    .map(item =>
 
                         <UserDetails
 
                             key={item.address}
                             img={item.avatar}
-                            f_name={item.first_name}
+                            f_name={(item.first_name)}
                             l_name={item.last_name}
                             address={item.address}
                             karma={item.karma}
@@ -29,6 +34,8 @@ export default class Name extends React.Component {
                         />
                     )
                 }
+
+
 
             </div>
         )
